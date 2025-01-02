@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: #1e1e2f;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Parallax Arka Plan */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+    filter: blur(8px) brightness(0.3);
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007396;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #007396;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* Ana Bölümler */
+main {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 80%;
+    max-width: 1200px;
+    margin-bottom: 3rem;
+    text-align: center;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3 {
+    margin-bottom: 1.5rem;
+    color: #007396;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #007396;
+}
+
+/* Yetenekler */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+ul li {
+    background: linear-gradient(145deg, #007396, #00a1b8);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 123, 150, 0.5);
+}
+
+/* Projeler */
+.project {
+    background: linear-gradient(135deg, #007396, #1e1e2f);
+    color: white;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #fff;
+}
+
+.project p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(45deg);
+    transition: left 0.4s ease;
+}
+
+.project:hover::before {
+    left: 100%;
+}
+
+/* İletişim */
+#contact {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+a {
+    color: #00d9ff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #007396;
+    text-shadow: 0 0 10px #00d9ff;
+}
+
+/* Footer */
+footer {
+    background: #10101b;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 3rem;
+    font-size: 1rem;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Neon Efekti için Linkler */
+footer a {
+    color: #00d9ff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+footer a:hover {
+    color: #007396;
+    text-shadow: 0 0 20px #00d9ff, 0 0 30px #00d9ff, 0 0 40px #00d9ff;
+    transform: scale(1.1);
+}
+
+/* Footerda Hareketli Bir Arka Plan Işıltısı */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00d9ff, #007396);
+    z-index: -1;
+    animation: glowingBackground 5s infinite ease-in-out;
+    opacity: 0.3;
+}
+
+/* Arka Plan Işıltı Animasyonu */
+@keyframes glowingBackground {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(10%) rotate(45deg);
+    }
+    50% {
+        transform: translateX(0) rotate(90deg);
+    }
+    75% {
+        transform: translateX(-10%) rotate(135deg);
+    }
+    100% {
+        transform: translateX(0) rotate(180deg);
+    }
+}
